@@ -36,10 +36,9 @@ export default class Team {
     return result;
   }
   *[Symbol.iterator]() {
-    let current = 0;
     let array = this.toArray();
-    while(current < array.length){
-      yield array[current++];
+    for(let char of array){
+      yield char;
     }
   }
 }
